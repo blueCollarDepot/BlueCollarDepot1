@@ -1,0 +1,61 @@
+/* Blues Collar Depot Css styles */
+/* reset */
+ul   {margin: 0; padding: 0;}
+/* wrapper styling */
+body, html {
+	background-color: #dbdbd9;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-size: 12px;
+	margin: 0; 
+	padding: 0;
+	}
+a {
+	text-decoration: none;
+	color: #000;
+	}
+#wrapper {
+	background-image:url(./img/header-back.png); background-repeat:repeat-x;
+	}
+#innerWrapper {
+	margin: 0 auto;
+	width: 1001px;
+	}
+#header {
+	height: 202px;
+	position: relative; 	
+}
+#logo  img{
+	margin: 15px;
+}
+.callNumber  {font-size: 20px; color: #646464; float: right;clear: right;margin-top: 35px;}
+.topNavLinks {float: right;list-style-type: none;margin-top: 5px;}
+.topNavLinks li {float: left; display: inline;padding-left: 10px;}
+.topMainNav {	position: absolute; top: 100px; right: 40px;}
+.topMainNav li {
+	float: left; 
+	display: inline;
+	padding-left: 10px; 
+	width: 195px; 
+	height: 42px; 
+	border: 1px solid #c6c5c6;
+
+	margin-left: 5px;
+}
+
+
+#footer {background-color: #036;overflow: hidden; padding: 15px; color: #fff;}
+.innerFooter {
+	margin: 0 auto;
+	width: 1001px;
+	}
+.mainNav {list-style-type: none; border: 1px solid #c6c5c6;overflow: hidden;border-bottom: none;}
+.mainNav li {float: left; display: inline;padding-left: 10px;}
+.mainNav li  a {font-size: 18px; color: #646464;padding: 9px;display: block;}
+
+.footerFeature {overflow: hidden;}
+.footerFeature li {float: left; display: inline;padding-left: 10px;}
+.footerLinks {overflow: hidden;}
+.footerFeature li {float: left; display: inline;padding-left: 10px;}
+.footerLinks  a {color: #fff;}
+.footerlinks li {float: left; display: inline;padding-left: 10px;}
+.footerlinks li li {float: none; display: block;}

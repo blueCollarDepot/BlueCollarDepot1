@@ -17,7 +17,7 @@ span.wait	{display:inline-block;}
 
 /******* global styles - added for cross-browser uniformity or usability ******/
 
-img	{border:0; vertical-align: top; display:inline-block;} /* vertical-align: top; removes the whitespace sometimes added under an image.  */
+img	{border:0; vertical-align: top;/*display:inline-block;*/} /* vertical-align: top; removes the whitespace sometimes added under an image.  */
 button {display:inline-block; margin: 0; padding: 0; cursor:pointer !important;}
 p	{margin-bottom:12px;}
 
@@ -609,3 +609,16 @@ ul.zwarn li	{margin-left:15px;}
 	width: 160px;
 	}
 
+
+	/* wrapper styling */
+body, html {margin: 0; padding: 0;}
+#wrapper {
+	background-image:url(./img/header-back.png); background-repeat:repeat-x;
+	}
+#innerWrapper {
+	margin: 0 auto;
+	width: 1001px;
+	}
+#header {
+	height: 202px; 	
+}
