@@ -22,7 +22,7 @@ var _gaq = _gaq || {'push':function(){}} //here for testing. REPLACE BEFORE DEPL
 var myCreole;
 
 var app = {vars:{
-	"release":"20121105050000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20121106115000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
 	"httpsURL":"https://ssl.zoovy.com/s=www.sporks.zoovy.com/",
 	"httpURL":"http://www.sporks.zoovy.com/"
@@ -80,30 +80,52 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 <div id='appView' class='displayNone'>  
 <div id="wrapper">
 <div id="innerWrapper">
+
 <div id="header">
 	<ul class="topNavLinks">
 		<li><a href="#" onClick="showContent('customer', {'show':'myaccount'}); return false;">	My Account</a></li>  <li>|</li> 		
 		<li><a href="#">Order Status</a></li>  <li>|</li>  
-		<li><a href="#" onClick="showContent('customer', {'show':'lists'}); return false;">	>Wish Lists</a></li>  <li>|</li>		
+		<li><a href="#" onClick="showContent('customer', {'show':'lists'}); return false;">Wish Lists</a></li>  <li>|</li>		
 		<li><a href='#top' onClick="return showContent('category',{'navcat':'.gift-certificates'});">Gift Certificates</a></li>  <li>|</li>
 		<li><a href="#">Sign in or Create an account</a></li>
 	</ul>
 <div class="callNumber">Call us on (877) 855-8566</div>
-<a id="logo" href='#top' onClick="return showContent('category',{'navcat':'.'});"><img src="img/bcd-logo.png" alt="Blue Collar Depot"/></a>
+<a id="logo" href='#top' onClick="return showContent('category',{'navcat':'.'});"  title="Blue Collar Depot"><img src="img/bcd-logo.png" alt="Blue Collar Depot"/></a>
 	<ul class="topMainNav">
 		<li><a href="#">Free Returns</a></li>  
 		<li><a href="#">120% Price Watch</a></li>    
 		<li><a href="#">View Cart</a></li>    
 	</ul>
-	<ul class="mainNav">
+	
+	
+	<ul  class="mainNav">
 		<li><a href='#top' onClick="return showContent('category',{'navcat':'.'});">Home</a></li>  
-		<li><a href="#">Automotive</a></li>    
-		<li><a href="#">Industrial</a></li>    
-		<li><a href="#">Flame Resistant</a></li>   
+		<li><a href="#">Automotives</a>
+			<ul>
+				<li><a href="#">Accessories</a></li>
+				<li><a href="#">Hats & Caps</a></li>
+				<li><a href="#">Shirts</a></li>
+				<li><a href="#">Hats & Caps</a></li>
+				<li><a href="#">Sweatshirts & Jackets</a></li>
+				<li><a href="#">Personalized Gear</a></li>
+				<li><a href="#">Team Clothing & Apprel</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Industrial</a>
+			<ul>
+				<li><a href="#">test</a></li>
+				<li><a href="#">test</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Flame Resistant</a></li>
 		<li><a href="#">Restaurant</a></li>
 		<li><a href="#">Embroidery</a></li>
 	</ul>
-</div>
+	
+	
+	
+	
+</div>  <!-- //end header -->
 <ul id='tier1categories'></ul>
 
 <!-- VIEW CONTENT -->
