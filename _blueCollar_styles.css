@@ -13,6 +13,9 @@ a {
 	text-decoration: none;
 	color: #000;
 	}
+a:hover {text-decoration: underline;}
+
+p {margin: 15px 0;}
 #wrapper {
 	background-image:url(./img/header-back.png); background-repeat:repeat-x;
 	}
@@ -31,24 +34,17 @@ a {
 .topNavLinks {float: right;list-style-type: none;margin-top: 5px;}
 .topNavLinks li {float: left; display: inline;padding-left: 10px;}
 .topNavLinks li a:hover {text-decoration: underline;}
-.topMainNav {	position: absolute; top: 100px; right: 40px;}
+.topMainNav {position: absolute; top: 111px; right: 10px;}
 .topMainNav li {
 	float: left; 
 	display: inline;
-	padding-left: 10px; 
-	width: 195px; 
-	height: 42px; 
+	width: 193px; 
+	height: 41px; 
 	border: 1px solid #c6c5c6;
 
 	margin-left: 5px;
 }
 
-
-#footer {background-color: #036;overflow: hidden; padding: 15px; color: #fff;}
-.innerFooter {
-	margin: 0 auto;
-	width: 1001px;
-	}
 	
 /* main nav css begin */
 .mainNav ul {
@@ -65,6 +61,7 @@ a {
 	position: relative;
 	border: 1px solid #c6c5c6;border-bottom: none;
 	width: 1001px;
+	position: absolute; top: 153px; left: 0;
 
 }
 	.mainNav:after {
@@ -73,7 +70,9 @@ a {
 
 	.mainNav li {
 		float: left;
+		background-image:url(./img/nav-pipe.png); background-repeat:no-repeat; background-position: right center;
 	}
+	.mainNav li:last-child {background: none;}
 		.mainNav li:hover {
 			background: #3d82d4;
 			background: -moz-linear-gradient(top,  #3d82d4 0%, #1557a5 100%);
@@ -95,6 +94,7 @@ a {
 			font-size: 18px; color: #646464;
 			padding: 10px 20px;  
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+
 		}
 			
 		
@@ -128,10 +128,22 @@ a {
 	}
 	/* main nav css end */
 
-.footerFeature {overflow: hidden;}
-.footerFeature li {float: left; display: inline;padding-left: 10px;}
-.footerLinks {overflow: hidden;}
-.footerFeature li {float: left; display: inline;padding-left: 10px;}
+
+#footer {background-color: #036;overflow: hidden; padding: 20px; color: #fff;}
+.innerFooter {
+	margin: 0 auto;
+	width: 1001px;
+	}
+	
+.footerFeature {margin: 0 0 20px 0; overflow: hidden; width: 1001px; height: 164px; background-image:url(./img/footer-feature-back.png); background-repeat:no-repeat;color: #000; list-style-type: none;}
+.footerFeature p {margin: 15px;}
+.footerFeature h4 { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; font-size: 28px;font-weight: normal; margin: 5px 15px 15px;}
+.footerFeature li {float: left;width: 333px;height: 164px; position: relative;}
+.footerFeature .footer-feature-list  {margin: 15px 15px 15px 30px; list-style-type: disc;}
+.footerFeature .footer-feature-list li {list-style-type: disc; height: auto;}
+.footerFeature .readMore {width: 110px; height: 26px; background: transparent; position: absolute; top: 135px; left: 220px; display: block;}
+
+.footerLinks {overflow: hidden;list-style-type: none;}
 .footerLinks  a {color: #fff;}
-.footerlinks li {float: left; display: inline;padding-left: 10px;}
-.footerlinks li li {float: none; display: block;}
+.footerLinks li {float: left; padding-left: 10px;}
+.footerLinks li li {float: none; display: block;}
