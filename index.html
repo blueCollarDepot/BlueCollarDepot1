@@ -78,6 +78,8 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 
 
 <div id='appView' class='displayNone'>  
+
+
 <div id="wrapper">
 <div id="innerWrapper">
 
@@ -122,14 +124,10 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 		<li><a href="#">Embroidery</a></li>
 	</ul>
 	
-	
-	
-	
-</div>  <!-- //end header -->
-<ul id='tier1categories'></ul>
 
-<!-- VIEW CONTENT -->
-<!-- leave the appView div, put your your html here ...  -->
+</div>  <!-- //end header -->
+<div id="contentWrapper">
+<ul id='tier1categories'></ul>
 
 	<!-- 
 	** REMINDER : DO NOT PUT ANY GRAPHICS/CONTENT THAT SHOULD NOT APPEAR ON EVERY PAGE IN THE VIEW (HERE)
@@ -138,6 +136,7 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 <div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
 <div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
 </div> <!-- end innerwrapper -->
+</div> <!-- end contentwrapper -->
 <div id="footer">
 	<div class="innerFooter">
 		<ul class="footerFeature">
