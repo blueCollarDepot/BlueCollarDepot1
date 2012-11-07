@@ -45,7 +45,6 @@ p {}
 	margin-left: 5px;
 }
 
-	
 /* main nav css begin */
 .mainNav ul {
 	display: none;
@@ -62,12 +61,10 @@ p {}
 	border: 1px solid #c6c5c6;border-bottom: none;
 	width: 1000px;
 	position: absolute; top: 153px; left: 0;
-
 }
 	.mainNav:after {
 		content: ""; clear: both; display: block;
 	}
-
 	.mainNav li {
 		float: left;
 		background-image:url(./img/nav-pipe.png); background-repeat:no-repeat; background-position: right center;
@@ -94,10 +91,8 @@ p {}
 			font-size: 18px; color: #646464;
 			padding: 10px 20px;  
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-
 		}
-			
-		
+				
 	.mainNav ul {
 		border-top: 2px solid #0a3b74;
 		background: #5f6975; 
