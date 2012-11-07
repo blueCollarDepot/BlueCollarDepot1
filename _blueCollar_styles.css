@@ -129,7 +129,7 @@ p {margin: 15px 0;}
 	/* main nav css end */
 
 
-#footer {background-color: #036;overflow: hidden; padding: 20px; color: #fff;}
+#footer {background-color: #036;overflow: hidden; padding: 20px 20px 60px; color: #fff;}
 .innerFooter {
 	margin: 0 auto;
 	width: 1001px;
@@ -143,7 +143,14 @@ p {margin: 15px 0;}
 .footerFeature .footer-feature-list li {list-style-type: disc; height: auto;}
 .footerFeature .readMore {width: 110px; height: 26px; background: transparent; position: absolute; top: 135px; left: 220px; display: block;}
 
-.footerLinks {overflow: hidden;list-style-type: none;}
+hr.hr {margin: 0 auto;  width:935px; height: 1px; background-color: #808080;color; #808080;}
+
+.footerLinks {overflow: hidden;list-style-type: none; margin:20px 0 45px 22px; font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;}
+.footerLinks h4 {font-size: 26px;}
 .footerLinks  a {color: #fff;}
-.footerLinks li {float: left; padding-left: 10px;}
-.footerLinks li li {float: none; display: block;}
+.footerLinks li {float: left;  width: 243px;}
+.footerLinks li li {float: none; display: block; padding-top:6px;  }
+.footerLinks li li a {font-size: 16px;}
+
+.footerTagline  {margin: 0 auto; text-align: center;}
+
