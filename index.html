@@ -37,6 +37,7 @@ if(document.location.protocol != 'file:')	{
 </script>
 
 
+
 <!-- 
 all css includes need to be after the js that changes the base url. 
 css files should be included before any .js file to ensure they are downloaded in parallel
@@ -47,7 +48,12 @@ css files should be included before any .js file to ensure they are downloaded i
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="loadscript.js"></script>
-
+<script type="text/javascript" src="jquery.bxSlider.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#slider1').bxSlider();
+  });
+</script>
 <script type="text/javascript">
 app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 </script>
@@ -124,6 +130,11 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 		<li><a href="#">Embroidery</a></li>
 	</ul>
 </div>  <!-- //end header -->
+
+	<div id="mainSlider">
+		<img src="img/slide-1.jpg" alt="slider-1" height="257" width="1001">
+	</div> <!-- //end main slider -->
+
 <div id="contentWrapper">
 <ul id='tier1categories'></ul>
 

@@ -16,6 +16,7 @@ a {
 a:hover {text-decoration: underline;}
 
 p {}
+h2 { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; font-size: 25px; background-color: #1355a3; padding: 5px 10px; font-weight: normal; color: #fff;}
 #wrapper {
 	background-image:url(./img/header-back.png); background-repeat:repeat-x;
 	}
@@ -34,7 +35,7 @@ p {}
 .topNavLinks {float: right;list-style-type: none;margin-top: 5px;}
 .topNavLinks li {float: left; display: inline;padding-left: 10px;}
 .topNavLinks li a:hover {text-decoration: underline;}
-.topMainNav {position: absolute; top: 111px; right: 10px;}
+.topMainNav {position: absolute; top: 112px; right: 10px;}
 .topMainNav li {
 	float: left; 
 	display: inline;
@@ -59,8 +60,8 @@ p {}
 	list-style: none;
 	position: relative;
 	border: 1px solid #c6c5c6;border-bottom: none;
-	width: 1000px;
-	position: absolute; top: 153px; left: 0;
+	width: 999px;
+	position: absolute; top: 154px; left: 0;
 }
 	.mainNav:after {
 		content: ""; clear: both; display: block;
@@ -128,12 +129,33 @@ p {}
 	}
 	/* main nav css end */
 	/* begin content area */
+	
+#mainSlider  {margin: 30px 0 15px 0;}
+/* slider 
+.bx-wrapper {height: 257px; width: 1001px!important}
+.bx-wrapper   #slider1  {height: 257px; width: 1001px!important}
+.bx-wrapper  #slider1  li  img  {height: 257px; width: 1001px!important}
+.bx-window {height: 257px; width: 1001px1001px!important}
+ */
 #contentWrapper  { background-color: #fff; width: 1001px; overflow: hidden;}
 
-#tier1categories  {float: left; width: 198px; padding: 15px; border-right: 1px solid #ccc; }
-
+#tier1categories  {float: left; width: 198px; padding: 15px; border-right: 1px solid #ccc; list-style-type: none;}
+#tier1categories  .catName  {  color: #262323;}
+#tier1categories  .thumbContainer  {display: none;}
+#tier1categories li  {border-top: 1px dotted #a9a9a9;padding: 7px 0; }
 #mainContentArea  {width: 742px; float: right;padding: 15px 15px 15px;}
-	
+#mainContentArea  .categoryList li {
+		border: 1px solid #a3a3a3;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		padding: 5px;
+		}
+.fluidList li {
+    margin: 8px;
+    padding: 0;
+}	
+
 	
 	
 	
