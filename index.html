@@ -97,7 +97,7 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
         <ul class="topMainNav">
                 <li><a href='#' onClick="return showContent('company',{'show':'returns'});" title="Free Returns"><img src="img/free-returns.png" alt="Free Returns"></a></li>
                 <li><a href='#top' onClick="return showContent('category',{'navcat':'.price-watch'});"  title="Price Watch"><img src="img/price-watch.png" alt="Price Watch"></a></li>
-                <li><a href="#"><img src="img/view-cart.png" alt="View Cart"></a></li>
+                <li class="viewCart"><span class="cartItemCount">120 items</span><a href="#" class="button orange">View Cart</a></li>
         </ul>
 	
 	
@@ -125,12 +125,11 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 		<li><a href='#top' onClick="return showContent('category',{'navcat':'.embroidery'});">Embroidery</a></li>
 		
 	<form id="headerSearchFrm" name="headerSearchFrm" action="#" class="productSearchForm" method="get">
-			<fieldset>
-			<legend>Search</legend>
-			<input name="KEYWORDS" value="Enter Search Term" class="productSearchKeyword handleDefault" type="search">
+
+			<input name="KEYWORDS" value="Search" class="productSearchKeyword handleDefault" type="search">
 			<input name="CATALOG" value="" class="productSearchCatalog" type="hidden">
-			</fieldset>
-			<input class="search" id="headerSearchSubmit" value="Search" type="submit">
+			<input class="search" id="headerSearchSubmit" value="" type="submit">
+
 	</form>
 		
 	</ul>
