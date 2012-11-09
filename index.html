@@ -48,12 +48,6 @@ css files should be included before any .js file to ensure they are downloaded i
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="loadscript.js"></script>
-<script type="text/javascript" src="jquery.bxSlider.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('#slider1').bxSlider();
-  });
-</script>
 <script type="text/javascript">
 app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 </script>
@@ -92,23 +86,24 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 <div id="header">
 	<ul class="topNavLinks">
 		<li><a href="#" onClick="showContent('customer', {'show':'myaccount'}); return false;">	My Account</a></li>  <li>|</li> 		
-		<li><a href="#">Order Status</a></li>  <li>|</li>  
+		<!-- <li><a href="#">Order Status</a></li>  <li>|</li> --> 
+		<li><a href='#' onClick="return showContent('company',{'show':'contact'});">Contact</a></li>  <li>|</li>
 		<li><a href="#" onClick="showContent('customer', {'show':'lists'}); return false;">Wish Lists</a></li>  <li>|</li>		
-		<li><a href='#top' onClick="return showContent('category',{'navcat':'.gift-certificates'});">Gift Certificates</a></li>  <li>|</li>
-		<li><a href="#">Sign in or Create an account</a></li>
+		<li><a href='#top' onClick="return showContent('category',{'navcat':'.gift-certificates'});">Gift Certificates</a></li>
+		<!-- <li><a href="#">Sign in or Create an account</a></li>  -->
 	</ul>
 <div class="callNumber">Call us on (877) 855-8566</div>
 <a id="logo" href='#top' onClick="return showContent('category',{'navcat':'.'});"  title="Blue Collar Depot"><img src="img/bcd-logo.png" alt="Blue Collar Depot"/></a>
         <ul class="topMainNav">
-                <li><a href="#"><img src="img/free-returns.png" alt="Free Returns"></a></li>
-                <li><a href="#"><img src="img/price-watch.png" alt="Free Returns"></a></li>
-                <li><a href="#"><img src="img/view-cart.png" alt="Free Returns"></a></li>
+                <li><a href='#' onClick="return showContent('company',{'show':'returns'});" title="Free Returns"><img src="img/free-returns.png" alt="Free Returns"></a></li>
+                <li><a href='#top' onClick="return showContent('category',{'navcat':'.price-watch'});"  title="Price Watch"><img src="img/price-watch.png" alt="Price Watch"></a></li>
+                <li><a href="#"><img src="img/view-cart.png" alt="View Cart"></a></li>
         </ul>
 	
 	
 	<ul  class="mainNav">
 		<li><a href='#top' onClick="return showContent('category',{'navcat':'.'});">Home</a></li>  
-		<li><a href="#">Automotives</a>
+		<li><a href='#top' onClick="return showContent('category',{'navcat':'.automotive'});">Automotives</a>
 			<ul>
 				<li><a href="#">Accessories</a></li>
 				<li><a href="#">Hats & Caps</a></li>
@@ -119,15 +114,25 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 				<li><a href="#">Team Clothing & Apprel</a></li>
 			</ul>
 		</li>
-		<li><a href="#">Industrial</a>
+		<li><a href='#top' onClick="return showContent('category',{'navcat':'.industrial'});">Industrial</a>
 			<ul>
 				<li><a href="#">test</a></li>
 				<li><a href="#">test</a></li>
 			</ul>
 		</li>
-		<li><a href="#">Flame Resistant</a></li>
-		<li><a href="#">Restaurant</a></li>
-		<li><a href="#">Embroidery</a></li>
+		<li><a href='#top' onClick="return showContent('category',{'navcat':'.flame-resistant'});">Flame Resistant</a></li>
+		<li><a href='#top' onClick="return showContent('category',{'navcat':'.restaurant'});">Restaurant</a></li>
+		<li><a href='#top' onClick="return showContent('category',{'navcat':'.embroidery'});">Embroidery</a></li>
+		
+	<form id="headerSearchFrm" name="headerSearchFrm" action="#" class="productSearchForm" method="get">
+			<fieldset>
+			<legend>Search</legend>
+			<input name="KEYWORDS" value="Enter Search Term" class="productSearchKeyword handleDefault" type="search">
+			<input name="CATALOG" value="" class="productSearchCatalog" type="hidden">
+			</fieldset>
+			<input class="search" id="headerSearchSubmit" value="Search" type="submit">
+	</form>
+		
 	</ul>
 </div>  <!-- //end header -->
 
@@ -142,8 +147,10 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 	** REMINDER : DO NOT PUT ANY GRAPHICS/CONTENT THAT SHOULD NOT APPEAR ON EVERY PAGE IN THE VIEW (HERE)
 	**				  INSTEAD PUT THEM INTO <div id="homepageTemplate"></div>
 	-->
+<div id="rightContent">
 <div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
 <div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
+</div> <!-- //end right content -->
 </div> <!-- end innerwrapper -->
 </div> <!-- end contentwrapper -->
 <div id="footer">
@@ -152,21 +159,21 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 			<li>
 					<h4>Business To Business</h4>
 					<p>
-					We supply directly to businesses, schools, local and state government. <a href="#">Learn more &#187;</a>
+					We supply directly to businesses, schools, local and state government. <a href='#top' onClick="return showContent('category',{'navcat':'.b2b'});" >Learn more &#187;</a>
 					</p>
 					<ul class="footer-feature-list">
 					<li>Volume Discounts</li>
 					<li>Free Shipping</li>
 					<li>Embroidery</li>
 					</ul>
-					<a href="#" class="readMore" title="Read More"></a>
+					<a href='#top'  class="readMore"  onClick="return showContent('category',{'navcat':'.b2b'});" title="Read More" ></a>
 			</li>
 					<li>
 					<h4>Free Shipping & Returns</h4>
 					<p>
-					We supply directly toGet FREE SHIPPING on all orders of $48 or More! Save Gas and shop online for FREE SHIPPING! Blue Collar Depot offers FREE RETURNS for exchanges! businesses, schools, local and state government. 
+					We supply directly toGet FREE SHIPPING on all orders of $48 or More! Save Gas and shop online for FREE SHIPPING! Blue Collar Depot offers FREE RETURNS for exchanges! businesses, schools, local and state government. <a href='#top' onClick="return showContent('category',{'navcat':'.return-policy'});" >Learn more &#187;</a> 
 					</p>
-					<a href="#" class="readMore" title="Read More"></a>
+					<a href='#top'  class="readMore"  onClick="return showContent('category',{'navcat':'.return-policy'});"  title="Read More"></a>
 			</li>
 					<li>
 					<h4>Free Coupons & Deals!</h4>
@@ -187,28 +194,29 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 				<li><a href='#top' onClick="return showContent('category',{'navcat':'.mail-orders'});">Mail Orders</a></li>
 				<li><a href='#top' onClick="return showContent('category',{'navcat':'.measure_guide'});">Measurement Guidelines</a></li>
 				<li><a href="#">Payment Options</a></li>
-				<li><a href="#" onClick="showContent('customer', {'show':'myaccount'}); return false;">	Privacy & Security</a></li>
+				<li><a href='#' onClick="return showContent('company',{'show':'privacy'});">Privacy & Security</a></li>
+				
 				</ul>
 			</li>
 			
 			<li>
 			<h4>Your Account</h4>
 				<ul>
-				<li><a href="#">Returns & Exchanges</a></li>
+				<li><a href='#' onClick="return showContent('company',{'show':'return'});">Returns & Exchanges</a></li>
 				<li><a href="#">Shipping Information</a></li>
 				<li><a href="#">Order History</a></li>
-				<li><a href="#">Volume Purchases</a></li>
-				<li><a href="#">Wholesale Purchases</a></li>
+				<li><a href='#top' onClick="return showContent('category',{'navcat':'.volume-purchase'});">Volume Purchases</a></li>
+				<li><a href='#top' onClick="return showContent('category',{'navcat':'.wholesale'});">Wholesale Purchases</a></li>
 				</ul>
 			</li>
 			
 			<li>
 			<h4>Our Offers</h4>
 				<ul>
-				<li><a href="#">New products</a></li>
-				<li><a href="#">Customer Service</a></li>
+				<li><a href='#top' onClick="return showContent('category',{'navcat':'.new-releases'});">New products</a></li>
+				<li><a href='#' onClick="return showContent('company',{'show':'contact'});">Customer Service</a></li>
 				<li><a href="#">Shipping</a></li>
-				<li><a href="#"> Returns</a></li>
+				<li><a href='#' onClick="return showContent('company',{'show':'return'});">Returns</a></li>
 				</ul>
 			</li>
 			
@@ -270,6 +278,17 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 -->
 <div id='homepageTemplate'>
 
+<div id="slideshowContainer" class="clearfix marginBottom">
+	<div id="slideshowNav"></div>
+	<ul id="wideSlideshow" class="pics slideshow">
+		<img src="blank.gif" data-bind="var: page(banner_slideshow1); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
+		<img src="blank.gif" data-bind="var: page(banner_slideshow2); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
+		<img src="blank.gif" data-bind="var: page(banner_slideshow3); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
+		<img src="blank.gif" data-bind="var: page(banner_slideshow4); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
+		<img src="blank.gif" data-bind="var: page(banner_slideshow5); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
+	</ul>
+</div><!-- /slideshowContainer -->
+
 
 	<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>
 	
@@ -279,13 +298,6 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<ul id='homeProdSearchBestSellers' data-bind='var: elastic-native({"size":"4","mode":"elastic-native","filter":{"term":{"tags":"IS_BESTSELLER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
 
 </div>
-
-
-
-
-
-
-
 
 
 

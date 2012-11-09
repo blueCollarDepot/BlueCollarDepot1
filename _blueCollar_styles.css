@@ -35,7 +35,7 @@ h2 { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; font-size: 2
 .topNavLinks {float: right;list-style-type: none;margin-top: 5px;}
 .topNavLinks li {float: left; display: inline;padding-left: 10px;}
 .topNavLinks li a:hover {text-decoration: underline;}
-.topMainNav {position: absolute; top: 112px; right: 10px;}
+.topMainNav {position: absolute; top: 111px; right: 10px;}
 .topMainNav li {
 	float: left; 
 	display: inline;
@@ -61,7 +61,7 @@ h2 { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; font-size: 2
 	position: relative;
 	border: 1px solid #c6c5c6;border-bottom: none;
 	width: 999px;
-	position: absolute; top: 154px; left: 0;
+	position: absolute; top: 153px; left: 0;
 }
 	.mainNav:after {
 		content: ""; clear: both; display: block;
@@ -131,19 +131,44 @@ h2 { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; font-size: 2
 	/* begin content area */
 	
 #mainSlider  {margin: 30px 0 15px 0;}
-/* slider 
-.bx-wrapper {height: 257px; width: 1001px!important}
-.bx-wrapper   #slider1  {height: 257px; width: 1001px!important}
-.bx-wrapper  #slider1  li  img  {height: 257px; width: 1001px!important}
-.bx-window {height: 257px; width: 1001px1001px!important}
- */
+
+
+/*################################slideshow*/
+
+#slideshowContainer  {position:relative; z-index:10; height:300px; min-width:720px; max-width:900px; margin:0 auto; overflow:hidden; z-index:5; background: orange;} /* setting height/width and overflow hidden eliminates popping (all banners showing then hiding) */
+#slideshowContainer  ul, .slideshow li	{list-style:none; margin:0; padding:0; display:inline; float:left; } /* the slides */
+
+#slideshowNav { z-index: 50; position: absolute; bottom: 10px; left: 10px; width:100%; text-align:left; }
+#slideshowNav a {
+	margin: 0 8px; font-size:.01em; 
+	text-decoration: none;
+	display:inline-block;
+	padding: 6px 8px;
+	border: 1px solid #c0b3ad;
+	color:#ffffff;
+	background: #ffffff;
+	cursor:pointer;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	}
+
+#slideshowNav a:hover, #slideshowNav a.activeSlide {
+	color:#bfd255;
+	background: #ea5051;
+	}
+#slideshowNav a:focus { outline: none; }
+
+/*################################slideshow*/
+
+
 #contentWrapper  { background-color: #fff; width: 1001px; overflow: hidden;}
 
 #tier1categories  {float: left; width: 198px; padding: 15px; border-right: 1px solid #ccc; list-style-type: none;}
 #tier1categories  .catName  {  color: #262323;}
 #tier1categories  .thumbContainer  {display: none;}
 #tier1categories li  {border-top: 1px dotted #a9a9a9;padding: 7px 0; }
-#mainContentArea  {width: 742px; float: right;padding: 15px 15px 15px;}
+#rightContent  {width: 742px; float: right;padding: 15px 15px 15px;} 
+/*#mainContentArea  {width: 742px; float: right;padding: 15px 15px 15px;}*/
 #mainContentArea  .categoryList li {
 		border: 1px solid #a3a3a3;
 		-webkit-border-radius: 5px;
