@@ -17,9 +17,11 @@
 
 	p {}
 	h2 { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; font-size: 25px; background-color: #1355a3; padding: 5px 10px; font-weight: normal; color: #fff;}
-	#wrapper {
+	#wrapper, #appPreView {
 		background-image:url(./img/header-back.png); background-repeat:repeat-x;
 		}
+	#appPreView  { width: 100%; height: 260px;margin: 0 auto; text-align: center;}
+	#appPreView  table  {margin: 0 auto; text-align: center;}
 	#innerWrapper {
 		margin: 0 auto;
 		width: 1001px;
@@ -117,6 +119,7 @@
 		border-radius: 0px; 
 		padding: 0;
 		position: absolute; top: 100%;
+		z-index: 7;
 	}
 		.mainNav ul li {
 			float: none; 
@@ -216,7 +219,7 @@
 
 /*################################slideshow*/
 
-#slideshowContainer  {position:relative; z-index:10; height:300px; min-width:720px; max-width:900px; margin:0 auto; overflow:hidden; z-index:5; background: orange;} /* setting height/width and overflow hidden eliminates popping (all banners showing then hiding) */
+#slideshowContainer  {position:relative; z-index:10; height:257px; width:1001px; margin:0 auto; overflow:hidden;  background: orange;} /* setting height/width and overflow hidden eliminates popping (all banners showing then hiding) */
 #slideshowContainer  ul, .slideshow li	{list-style:none; margin:0; padding:0; display:inline; float:left; } /* the slides */
 
 #slideshowNav { z-index: 50; position: absolute; bottom: 10px; left: 10px; width:100%; text-align:left; }
@@ -242,13 +245,14 @@
 /*################################slideshow*/
 
 
-#contentWrapper  { background-color: #fff; width: 1001px; overflow: hidden;}
+#contentWrapper  { background-color: #fff; width: 971px; overflow: hidden; padding: 15px;}
 
 #tier1categories  {float: left; width: 198px; padding: 15px; border-right: 1px solid #ccc; list-style-type: none;}
 #tier1categories  .catName  {  color: #262323;}
+#tier1categories  .catName:hover {text-decoration: underline;}
 #tier1categories  .thumbContainer  {display: none;}
 #tier1categories li  {border-top: 1px dotted #a9a9a9;padding: 7px 0; }
-#rightContent  {width: 742px; float: right;padding: 15px 15px 15px;} 
+#rightContent  {width: 727px; float: right;} 
 /*#mainContentArea  {width: 742px; float: right;padding: 15px 15px 15px;}*/
 #mainContentArea  .categoryList li {
 		border: 1px solid #a3a3a3;

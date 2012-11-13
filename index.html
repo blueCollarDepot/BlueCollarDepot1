@@ -60,10 +60,15 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 <div id='appPreView'>
 <table>
 <tr>
-	<td><!-- put logo here --></td>
+	<td><img src="img/bcd-logo.png" alt="Blue Collar Depot"/></td>
+</tr>
+<tr>
 	<td>
 	<h3>One moment please.</h3>
-	
+	</td>
+</tr>
+<tr>
+	<td>
 	<div class='alignCenter'>
 	<progress id="appPreViewProgressBar" max="100" value="0" /><br />
 	</div>
@@ -135,21 +140,22 @@ app.u.loadScript(app.vars.baseURL+"_bluecollar_init.js");
 	</ul>
 </div>  <!-- //end header -->
 
-	<div id="mainSlider">
-		<img src="img/slide-1.jpg" alt="slider-1" height="257" width="1001">
-	</div> <!-- //end main slider -->
+<div id="mainSlider">
+		 <img src="img/slide-1.jpg" alt="slider-1" height="257" width="1001">  
+</div> <!-- //end main slider -->
 
-<div id="contentWrapper">
+<div id="contentWrapper" class="clearfix">
+<!-- product data only need in homepage -->
 <ul id='tier1categories'></ul>
 
 	<!-- 
 	** REMINDER : DO NOT PUT ANY GRAPHICS/CONTENT THAT SHOULD NOT APPEAR ON EVERY PAGE IN THE VIEW (HERE)
 	**				  INSTEAD PUT THEM INTO <div id="homepageTemplate"></div>
 	-->
-<div id="rightContent">
+
 <div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
 <div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
-</div> <!-- //end right content -->
+
 </div> <!-- end innerwrapper -->
 </div> <!-- end contentwrapper -->
 <div id="footer">
@@ -277,17 +283,9 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 -->
 <div id='homepageTemplate'>
 
-<div id="slideshowContainer" class="clearfix marginBottom">
-	<div id="slideshowNav"></div>
-	<ul id="wideSlideshow" class="pics slideshow">
-		<img src="blank.gif" data-bind="var: page(banner_slideshow1); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
-		<img src="blank.gif" data-bind="var: page(banner_slideshow2); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
-		<img src="blank.gif" data-bind="var: page(banner_slideshow3); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
-		<img src="blank.gif" data-bind="var: page(banner_slideshow4); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
-		<img src="blank.gif" data-bind="var: page(banner_slideshow5); format: banner; extension:myRIA; editor:banner; wrap:<li>;" height="300" width="900">
-	</ul>
-</div><!-- /slideshowContainer -->
+<div id="rightContent">
 
+	<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>
 
 	<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>
 	
@@ -295,7 +293,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
 
 	<ul id='homeProdSearchBestSellers' data-bind='var: elastic-native({"size":"4","mode":"elastic-native","filter":{"term":{"tags":"IS_BESTSELLER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-
+</div> <!-- //end right Content -->
 </div>
 
 

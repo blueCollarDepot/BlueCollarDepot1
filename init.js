@@ -26,14 +26,6 @@ app.rq.push(['extension',1,'analytics_google','extensions/analytics_google.js','
 app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 	$( ".tabbedProductContent",$('#productTemplate_'+app.u.makeSafeHTMLId(P.pid))).tabs();
 	}]);
-	
-app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-	$( "#mainSlider, #tier1categories").removeClass("displayNone");
-	}]);
-app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {
-	$( "#mainSlider, #tier1categories").addClass("displayNone");
-	}]); 
-	
 
 app.rq.push(['script',0,(document.location.protocol == 'file:') ? app.vars.httpURL+'jquery/config.js' : app.vars.baseURL+'jquery/config.js']); //The config.js is dynamically generated.
 app.rq.push(['script',0,app.vars.baseURL+'model.js']); //'validator':function(){return (typeof zoovyModel == 'function') ? true : false;}}

@@ -28,18 +28,28 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 	}]);
 	
 app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-	$( "#mainSlider, #tier1categories").removeClass("displayNone");
+	$( "#mainSlider").removeClass("displayNone");
 	}]);
-app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {
-	$( "#mainSlider, #tier1categories").addClass("displayNone");
+app.rq.push(['templateFunction','homepageTemplate','onLeave',function(P) {
+	$( "#mainSlider").addClass("displayNone");
 	}]); 
 	
+	
+	
+
 
 app.rq.push(['script',0,(document.location.protocol == 'file:') ? app.vars.httpURL+'jquery/config.js' : app.vars.baseURL+'jquery/config.js']); //The config.js is dynamically generated.
 app.rq.push(['script',0,app.vars.baseURL+'model.js']); //'validator':function(){return (typeof zoovyModel == 'function') ? true : false;}}
 app.rq.push(['script',0,app.vars.baseURL+'includes.js']); //','validator':function(){return (typeof handlePogs == 'function') ? true : false;}})
 app.rq.push(['script',1,app.vars.baseURL+'jeditable.js']); //used for making text editable (customer address). non-essential. loaded late.
 app.rq.push(['script',0,app.vars.baseURL+'controller.js']);
+
+//cycle used for slideshow
+app.rq.push(['script',0,app.vars.baseURL+'cycle.js']);
+
+
+
+
 
 //sample of an onDeparts. executed any time a user leaves this page/template type.
 app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {app.u.dump("just left the homepage")}]);
